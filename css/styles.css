@@ -345,14 +345,16 @@ background: #fff;
 /*footer*/
 
 .page-bottom{
-   
+   display:flex;
     padding:100px 0;
     background-color: #2e2f42;
     
     
 }
 .footer-container{
-    
+    display: flex;
+    flex-direction: column; /* Вміст контейнера в стовпчик */
+    padding: 10px;
     background-color: #2e2f42;
     max-width: 1158px;
     margin-bottom: 16px;
@@ -368,12 +370,18 @@ letter-spacing: 0.02em;
 color: #f4f4fd;
 }
 
-.footer-logo{
-   
-    
-   
-}
 .social-links{
-    display:block;
+    min-width: 208px;
+    display: flex;
+    flex-direction: column; /* Вміст контейнера в стовпчик */
+    padding: 10px;
 }
+.social-text{
+    font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.02em;
+color: #f4f4fd;
+}
+
 
