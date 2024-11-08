@@ -151,7 +151,8 @@ color: #404bbf;
 }
 
 .main-section{
-    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office\ 1-min.png'); /* Вставте шлях до вашого зображення */
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url('../images/people-office.png');
+    min-width: 1440px;
   background-size: cover; /* Це збільшить зображення до повного покриття блоку */
   background-position: center; /* Вирівнює зображення по центру */
   background-repeat: no-repeat; /* Запобігає повторенню зображення */
@@ -180,6 +181,7 @@ button{
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
     
 }
@@ -245,33 +247,17 @@ color: #434455;
 .info-box{
     width: calc((100% - 72px) / 4);
 }
-.overlay-img{
-    position:relative;
-    overflow:hidden
+.svg-icons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color:#f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
 }
-.overlay-box {
-    
-    background-color: #3f51b5;
-    color: #fff;
-      position:absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
 
-      transform:translateY(100%);
-      transition:transform 250ms ease-in-out
-  }
-  .portfolio-item{
-    cursor: pointer;
-  }
-  .portfolio-item:hover .overlay-box{
-      transform:translateY(0);
-  }
-  .overlay-text{
-    padding:40px 32px 164px;
-color: #f4f4fd;
-  }
 
 /*Team*/
 .team-section{
@@ -335,11 +321,27 @@ margin-bottom: 72px;
 align-items: center;
 justify-content: center;
 flex-direction: row;
-gap: 24px;
+gap:24px;
 margin-top:8px;
 }
+.social-link{
+width: 100%;
+height: 100%;
+background-color: #4d5ae5;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.social-link:hover, .social-link:focus{
+    background-color: #404bbf;
+
+}
+
 .icon{
     fill:#4D5AE5;
+    
+
 }
 .icon:hover{
     cursor: pointer;
@@ -393,6 +395,37 @@ background: #fff;
     letter-spacing: 0.02em;
     
 }
+.overlay-img {
+    position: relative;
+    overflow: hidden
+}
+
+.overlay-box {
+
+    background-color: #3f51b5;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: translateY(100%);
+    transition: transform 250ms ease-in-out
+}
+
+.portfolio-item {
+    cursor: pointer;
+}
+
+.portfolio-item:hover .overlay-box {
+    transform: translateY(0);
+}
+
+.overlay-text {
+    padding: 40px 32px 164px;
+    color: #f4f4fd;
+}
 
 
 /*footer*/
@@ -425,7 +458,7 @@ color: #f4f4fd;
     
 }
 
-.social-links{
+.social-links-footer{
     
     margin-left: 120px;
 
@@ -435,7 +468,7 @@ color: #f4f4fd;
     margin-bottom: 16px;
 color: #f4f4fd;
 }
-.social-list {
+.social-list-footer {
     display: flex; /* Розміщення елементів у рядок */
     list-style: none; /* Прибрати маркери списку */
     padding: 0; /* Вирівнювання відступів списку */
